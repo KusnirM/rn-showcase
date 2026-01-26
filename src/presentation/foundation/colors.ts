@@ -1,6 +1,3 @@
-// App color definitions (Light & Dark mode)
-// React Native equivalent of KMP Colors.kt
-
 export const lightColorScheme = {
   primary: '#6200EE',
   onPrimary: '#FFFFFF',

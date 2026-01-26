@@ -1,43 +1,20 @@
 import React from 'react';
 import { Text } from 'react-native-paper';
 import { useAppColors } from '../../../foundation/theme';
+import { TextBaseProps, TextVariantProps } from '../types';
 
-interface TextBodyLargeProps {
-  text: string;
-  color: string;
-}
+export const TextBodyLarge: React.FC<TextBaseProps> = ({text, color}) => (
+  <Text variant="bodyLarge" style={{color}}>{text}</Text>
+);
 
-export const TextBodyLarge: React.FC<TextBodyLargeProps> = ({
-  text,
-  color,
-}) => {
-  return (
-    <Text variant="bodyLarge" style={{ color }}>
-      {text}
-    </Text>
-  );
-};
+export const TextBodyLargeNeutral100: TextVariantProps = ({text}) => (
+  <TextBodyLarge text={text} color={useAppColors().neutral100} />
+);
 
-export const TextBodyLargeNeutral100: React.FC<Omit<TextBodyLargeProps, 'color'>> = ({
-  text,
-}) => {
-  return (
-    <TextBodyLarge text={text} color={useAppColors().neutral100} />
-  );
-};
+export const TextBodyLargeNeutral80: TextVariantProps = ({text}) => (
+  <TextBodyLarge text={text} color={useAppColors().neutral80} />
+);
 
-export const TextBodyLargeNeutral80: React.FC<Omit<TextBodyLargeProps, 'color'>> = ({
-  text,
-}) => {
-  return (
-    <TextBodyLarge text={text} color={useAppColors().neutral80} />
-  );
-};
-
-export const TextBodyLargePrimary: React.FC<Omit<TextBodyLargeProps, 'color'>> = ({
-  text,
-}) => {
-  return (
-    <TextBodyLarge text={text} color={useAppColors().primary} />
-  );
-};
+export const TextBodyLargePrimary: TextVariantProps = ({text}) => (
+  <TextBodyLarge text={text} color={useAppColors().primary} />
+);

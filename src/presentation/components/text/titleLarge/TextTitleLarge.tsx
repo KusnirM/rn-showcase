@@ -1,35 +1,16 @@
 import React from 'react';
 import { Text } from 'react-native-paper';
 import { useAppColors } from '../../../foundation/theme';
+import { TextBaseProps, TextVariantProps } from '../types';
 
-interface TextTitleLargeProps {
-  text: string;
-  color: string;
-}
+export const TextTitleLarge: React.FC<TextBaseProps> = ({text, color}) => (
+  <Text variant="titleLarge" style={{color}}>{text}</Text>
+);
 
-export const TextTitleLarge: React.FC<TextTitleLargeProps> = ({
-  text,
-  color,
-}) => {
-  return (
-    <Text variant="titleLarge" style={{ color }}>
-      {text}
-    </Text>
-  );
-};
+export const TextTitleLargeNeutral80: TextVariantProps = ({text}) => (
+  <TextTitleLarge text={text} color={useAppColors().neutral80} />
+);
 
-export const TextTitleLargeNeutral80: React.FC<Omit<TextTitleLargeProps, 'color'>> = ({
-  text,
-}) => {
-  return (
-    <TextTitleLarge text={text} color={useAppColors().neutral80} />
-  );
-};
-
-export const TextTitleLargePrimary: React.FC<Omit<TextTitleLargeProps, 'color'>> = ({
-  text,
-}) => {
-  return (
-    <TextTitleLarge text={text} color={useAppColors().primary} />
-  );
-};
+export const TextTitleLargePrimary: TextVariantProps = ({text}) => (
+  <TextTitleLarge text={text} color={useAppColors().primary} />
+);

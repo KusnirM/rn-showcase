@@ -1,19 +1,8 @@
 import React from 'react';
 import { Text } from 'react-native-paper';
 import { useAppColors } from '../../../foundation/theme';
+import { TextBaseProps, TextVariantProps } from '../types';
 
-interface TextLabelSmallProps {
-  text: string;
-  color: string;
-}
-
-export const TextLabelSmall: React.FC<TextLabelSmallProps> = ({
-  text,
-  color,
-}) => {
-  return (
-    <Text variant="labelSmall" style={{ color }}>
-      {text}
-    </Text>
-  );
-};
+export const TextLabelSmall: React.FC<TextBaseProps> = ({text, color}) => (
+  <Text variant="labelSmall" style={{color}}>{text}</Text>
+);
