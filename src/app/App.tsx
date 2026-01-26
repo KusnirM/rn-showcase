@@ -57,7 +57,7 @@ const TestScreen = () => {
 
   return (
     <ScrollView style={styles.container}>
-        <TextHeadlineMediumPrimary>Component Showcase</TextHeadlineMediumPrimary>
+        <TextHeadlineMediumPrimary>aaa</TextHeadlineMediumPrimary>
 
       {/* Text Components */}
       {/* <View style={styles.section}>
