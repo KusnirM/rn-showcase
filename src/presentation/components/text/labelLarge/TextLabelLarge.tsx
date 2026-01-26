@@ -3,18 +3,18 @@ import { Text } from 'react-native-paper';
 import { useAppColors } from '../../../foundation/theme';
 import { TextBaseProps, TextVariantProps } from '../TextProps';
 
-export const TextLabelLarge: React.FC<TextBaseProps> = ({ text, color }) => (
-  <Text variant="labelLarge" style={{ color }}>{text}</Text>
+export const TextLabelLarge: React.FC<TextBaseProps> = ({ children, color }) => (
+  <Text variant="labelLarge" style={{ color }}>{children}</Text>
 );
 
-export const TextButtonPrimary: TextVariantProps = ({ text }) => (
-  <TextLabelLarge text={text} color={useAppColors().primary} />
+export const TextButtonPrimary: TextVariantProps = ({ children }) => (
+  <TextLabelLarge color={useAppColors().primary}>{children}</TextLabelLarge>
 );
 
-export const TextButtonNeutral0: TextVariantProps = ({ text }) => (
-  <TextLabelLarge text={text} color={useAppColors().neutral0} />
+export const TextButtonNeutral0: TextVariantProps = ({ children }) => (
+  <TextLabelLarge color={useAppColors().neutral0}>{children}</TextLabelLarge>
 );
 
-export const TextButtonError: TextVariantProps = ({ text }) => (
-  <TextLabelLarge text={text} color={useAppColors().error} />
+export const TextButtonError: TextVariantProps = ({ children }) => (
+  <TextLabelLarge color={useAppColors().error}>{children}</TextLabelLarge>
 );

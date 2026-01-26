@@ -75,7 +75,7 @@ const TestScreen = () => {
         <ColumnSpacer2 />
         <TextBodySmallNeutral80>Body Small Neutral 80</TextBodySmallNeutral80>
         <ColumnSpacer2 />
-        <TextLabelLarge uppercase>Label Large</TextLabelLarge>
+        <TextLabelLarge>Label Large</TextLabelLarge>
         <TextButtonPrimary>Button Primary Text</TextButtonPrimary>
         <TextButtonError>Button Error Text</TextButtonError>
         <TextLabelMedium>Label Medium</TextLabelMedium>

@@ -5,7 +5,7 @@ import React from 'react';
  * Optional props can be implemented by specific components as needed.
  */
 export interface TextBaseProps {
-  text: string;
+  children: string;
   color: string;
   numberOfLines?: number;
 }
