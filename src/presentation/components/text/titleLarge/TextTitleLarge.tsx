@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native-paper';
 import { useAppColors } from '../../../foundation/theme';
-import { TextBaseProps, TextVariantProps } from '../types';
+import { TextBaseProps, TextVariantProps } from '../TextProps';
 
 export const TextTitleLarge: React.FC<TextBaseProps> = ({text, color}) => (
   <Text variant="titleLarge" style={{color}}>{text}</Text>
