@@ -1,8 +1,7 @@
 import React from 'react';
 import { Text } from 'react-native-paper';
-import { useAppColors } from '../../../foundation/theme';
-import { TextBaseProps, TextVariantProps } from '../TextProps';
+import { TextBaseProps } from '../TextProps';
 
-export const TextLabelMedium: React.FC<TextBaseProps> = ({ children, color }) => (
+export const TextLabelMedium = ({ children, color }: TextBaseProps) => (
   <Text variant="labelMedium" style={{ color }}>{children}</Text>
 );

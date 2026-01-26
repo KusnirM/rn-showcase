@@ -3,10 +3,10 @@ import { Text } from 'react-native-paper';
 import { useAppColors } from '../../../foundation/theme';
 import { TextBaseProps, TextVariantProps } from '../TextProps';
 
-export const TextBodySmall: React.FC<TextBaseProps> = ({children, color}) => (
+export const TextBodySmall = ({children, color}: TextBaseProps) => (
   <Text variant="bodySmall" style={{color}}>{children}</Text>
 );
 
-export const TextBodySmallNeutral80: TextVariantProps = ({children}) => (
+export const TextBodySmallNeutral80 = ({children}: TextVariantProps) => (
   <TextBodySmall color={useAppColors().neutral80}>{children}</TextBodySmall>
 );

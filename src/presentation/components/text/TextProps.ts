@@ -1,5 +1,3 @@
-import React from 'react';
-
 /**
  * Base props for text components that require color.
  * Optional props can be implemented by specific components as needed.
@@ -11,7 +9,7 @@ export interface TextBaseProps {
 }
 
 /**
- * Generic type for text component variant props.
+ * Props for text component variants.
  * Variants omit the 'color' prop and use theme colors instead.
  */
-export type TextVariantProps = React.FC<Omit<TextBaseProps, 'color'>>;
+export type TextVariantProps = Omit<TextBaseProps, 'color'>;
