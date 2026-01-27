@@ -7,6 +7,7 @@ export const TextBodySmall = ({children, color}: TextBaseProps) => (
   <Text variant="bodySmall" style={{color}}>{children}</Text>
 );
 
-export const TextBodySmallNeutral80 = ({children}: TextVariantProps) => (
-  <TextBodySmall color={useAppColors().neutral80}>{children}</TextBodySmall>
-);
+export const TextBodySmallNeutral80 = ({children}: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextBodySmall color={colors.neutral80}>{children}</TextBodySmall>;
+};

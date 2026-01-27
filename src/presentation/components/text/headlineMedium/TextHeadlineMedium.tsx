@@ -7,6 +7,7 @@ export const TextHeadlineMedium = ({ children, color }: TextBaseProps) => (
   <Text variant="headlineMedium" style={{ color }}>{children}</Text>
 );
 
-export const TextHeadlineMediumPrimary = ({ children }: TextVariantProps) => (
-  <TextHeadlineMedium color={useAppColors().primary}>{children}</TextHeadlineMedium>
-);
+export const TextHeadlineMediumPrimary = ({ children }: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextHeadlineMedium color={colors.primary}>{children}</TextHeadlineMedium>;
+};

@@ -7,6 +7,7 @@ export const TextLabelMedium = ({ children, color }: TextBaseProps) => (
   <Text variant="labelMedium" style={{ color }}>{children}</Text>
 );
 
-export const TextLabelMediumNeutral80 = ({ children }: TextVariantProps) => (
-  <TextLabelMedium color={useAppColors().primary}>{children}</TextLabelMedium>
-);
+export const TextLabelMediumNeutral80 = ({ children }: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextLabelMedium color={colors.neutral80}>{children}</TextLabelMedium>;
+};

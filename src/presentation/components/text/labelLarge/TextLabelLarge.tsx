@@ -7,14 +7,17 @@ export const TextLabelLarge = ({ children, color }: TextBaseProps) => (
   <Text variant="labelLarge" style={{ color }}>{children}</Text>
 );
 
-export const TextLabelLargePrimary = ({ children }: TextVariantProps) => (
-  <TextLabelLarge color={useAppColors().primary}>{children}</TextLabelLarge>
-);
+export const TextLabelLargePrimary = ({ children }: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextLabelLarge color={colors.primary}>{children}</TextLabelLarge>;
+};
 
-export const TextLabelLargeNeutral0 = ({ children }: TextVariantProps) => (
-  <TextLabelLarge color={useAppColors().neutral0}>{children}</TextLabelLarge>
-);
+export const TextLabelLargeNeutral0 = ({ children }: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextLabelLarge color={colors.neutral0}>{children}</TextLabelLarge>;
+};
 
-export const TextLabelLargeError = ({ children }: TextVariantProps) => (
-  <TextLabelLarge color={useAppColors().error}>{children}</TextLabelLarge>
-);
+export const TextLabelLargeError = ({ children }: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextLabelLarge color={colors.error}>{children}</TextLabelLarge>;
+};

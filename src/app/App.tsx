@@ -78,10 +78,13 @@ const TestScreen = () => {
         <TextLabelLargePrimary>Label Large</TextLabelLargePrimary>
         <TextLabelMediumNeutral80>Label Medium Neutral 80</TextLabelMediumNeutral80>
         <TextLabelSmall color={colors.primary}>Label Small</TextLabelSmall>
-        
+        <ColumnSpacer2 />
+        <CircularProgress />
+        <ColumnSpacer2 />
+        <CircularProgress size='small' />
       </View>
 
-      {/* <AppDividerPrimary /> */}
+      <AppDividerPrimary />
 
       {/* <View style={styles.section}>
         <TextTitleLargePrimary>Button Components</TextTitleLargePrimary>

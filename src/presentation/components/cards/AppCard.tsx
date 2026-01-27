@@ -7,13 +7,13 @@ interface AppCardProps {
   elevated?: boolean;
 }
 
-export const AppCard: React.FC<AppCardProps> = ({ children, elevated = true }) => (
-  <Card
-    mode="elevated"
-    elevation={elevated ? 1 : 0}
-    style={{ backgroundColor: useAppTheme().colors.surface }}>
-    <Card.Content>{children}</Card.Content>
-  </Card>
-);
+export const AppCard: React.FC<AppCardProps> = ({ children, elevated = true }): React.JSX.Element => {
+  const theme = useAppTheme();
+  return (
+    <Card mode="elevated" elevation={elevated ? 1 : 0} style={{ backgroundColor: theme.colors.surface }}>
+      <Card.Content>{children}</Card.Content>
+    </Card>
+  );
+};
 
 

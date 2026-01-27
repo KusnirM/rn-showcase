@@ -7,10 +7,12 @@ export const TextBodyMedium = ({children, color, numberOfLines}: TextBaseProps) 
   <Text variant="bodyMedium" style={{color}} numberOfLines={numberOfLines}>{children}</Text>
 );
 
-export const TextBodyMediumNeutral100 = ({children, numberOfLines}: TextVariantProps) => (
-  <TextBodyMedium color={useAppColors().neutral100} numberOfLines={numberOfLines}>{children}</TextBodyMedium>
-);
+export const TextBodyMediumNeutral100 = ({children, numberOfLines}: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextBodyMedium color={colors.neutral100} numberOfLines={numberOfLines}>{children}</TextBodyMedium>;
+};
 
-export const TextBodyMediumNeutral80 = ({children, numberOfLines}: TextVariantProps) => (
-  <TextBodyMedium color={useAppColors().neutral80} numberOfLines={numberOfLines}>{children}</TextBodyMedium>
-);
+export const TextBodyMediumNeutral80 = ({children, numberOfLines}: TextVariantProps) => {
+  const colors = useAppColors();
+  return <TextBodyMedium color={colors.neutral80} numberOfLines={numberOfLines}>{children}</TextBodyMedium>;
+};
