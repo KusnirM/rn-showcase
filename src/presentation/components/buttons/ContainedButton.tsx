@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-native-paper';
 import { StyleProp, ViewStyle } from 'react-native';
 import { useAppTheme } from '../../foundation/theme';
-import { space4, cardCornerRadius6 } from '../../foundation/dimensions';
+import { space4, cardCornerRadius6, space2, space } from '../../foundation/dimensions';
 
 interface ContainedButtonProps {
   text: string;
@@ -19,12 +19,11 @@ export const ContainedButton: React.FC<ContainedButtonProps> = ({
     <Button
       mode="contained"
       onPress={onPress}
-      contentStyle={{ paddingVertical: space4 }}
       buttonColor={theme.colors.primary}
       textColor={theme.colors.neutral0}
-      theme={{ roundness: cardCornerRadius6 }}
+      style={{ alignSelf: 'flex-start' }}
     >
-      {text.toUpperCase()}
+      {text}
     </Button>
   );
 };

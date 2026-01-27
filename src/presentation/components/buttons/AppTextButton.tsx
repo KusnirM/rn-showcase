@@ -13,7 +13,7 @@ export const AppTextButton: React.FC<AppTextButtonProps> = ({
 }): React.JSX.Element => {
   const theme = useAppTheme();
   return (
-    <Button mode="text" onPress={onPress} textColor={theme.colors.primary}>
+    <Button mode="text" onPress={onPress} textColor={theme.colors.primary} style={{ alignSelf: 'flex-start' }}>
       {text.toUpperCase()}
     </Button>
   );
@@ -25,7 +25,7 @@ export const AppTextButtonError: React.FC<AppTextButtonProps> = ({
 }): React.JSX.Element => {
   const theme = useAppTheme();
   return (
-    <Button mode="text" onPress={onPress} textColor={theme.colors.error}>
+    <Button mode="text" onPress={onPress} textColor={theme.colors.error} style={{ alignSelf: 'flex-start' }}>
       {text.toUpperCase()}
     </Button>
   );

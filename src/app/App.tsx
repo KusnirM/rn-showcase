@@ -82,31 +82,17 @@ const TestScreen = () => {
         <CircularProgress />
         <ColumnSpacer2 />
         <CircularProgress size='small' />
-      </View>
 
-      <AppDividerPrimary />
-
-      {/* <View style={styles.section}>
-        <TextTitleLargePrimary>Button Components</TextTitleLargePrimary>
-        <ColumnSpacer4 />
-
+        <AppDividerPrimary />
+                <ColumnSpacer2 />
         <ContainedButton text="Contained Button" onPress={() => console.log('Contained')} />
-        <ColumnSpacer2 />
-
+                  <ColumnSpacer2 />
         <OutlinedButton text="Outlined Button" onPress={() => console.log('Outlined')} />
-        <ColumnSpacer2 />
-
+                  <ColumnSpacer2 />
         <AppTextButton text="Text Button" onPress={() => console.log('Text')} />
         <ColumnSpacer2 />
 
         <AppTextButtonError text="Text Button Error" onPress={() => console.log('Error')} />
-      </View>
-
-      <AppDividerPrimary />
-
-      <View style={styles.section}>
-        <TextTitleLargePrimary>Card Components</TextTitleLargePrimary>
-        <ColumnSpacer4 />
 
         <AppCard>
           <TextBodyLarge>App Card</TextBodyLarge>
@@ -115,13 +101,14 @@ const TestScreen = () => {
 
         <ColumnSpacer4 />
 
-        <AppElevatedCard onPress={() => console.log('Card pressed')}>
-          <TextBodyLarge>Elevated Card (Clickable)</TextBodyLarge>
+        <AppCard onPress={() => console.log('Card pressed')}>
+          <TextBodyLargeNeutral80>Elevated Card (Clickable)/</TextBodyLargeNeutral80>>
           <TextBodySmallNeutral80>This card has elevation and is clickable</TextBodySmallNeutral80>
-        </AppElevatedCard>
+        </AppCard>
       </View>
 
       <AppDividerPrimary />
+        {/*
 
       <View style={styles.section}>
         <TextTitleLargePrimary>Form Components</TextTitleLargePrimary>
@@ -151,7 +138,7 @@ const TestScreen = () => {
 
       <AppDividerPrimary /> */}
 
-      {/* <View style={styles.section}>
+        {/* <View style={styles.section}>
         <TextTitleLargePrimary>Utility Components</TextTitleLargePrimary>
         <ColumnSpacer4 />
 
@@ -172,6 +159,8 @@ const TestScreen = () => {
       </View>
 
       <View style={{ height: 100 }} /> */}
+      </View>
+
     </ScrollView>
   );
 };
