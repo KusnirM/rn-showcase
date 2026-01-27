@@ -14,9 +14,9 @@ import {
   TextHeadlineMedium,
   TextHeadlineMediumPrimary,
   TextLabelLarge,
-  TextButtonPrimary,
-  TextButtonNeutral0,
-  TextButtonError,
+  TextLabelLargePrimary,
+  TextLabelLargeNeutral0,
+  TextLabelLargeError,
   TextLabelMedium,
   TextLabelSmall,
   TextTitleLarge,
@@ -28,7 +28,6 @@ import {
   AppTextButtonError,
   AppFloatingActionButton,
   AppCard,
-  AppElevatedCard,
   AppTextField,
   AppCheckbox,
   AppSwitch,
@@ -38,9 +37,10 @@ import {
   AppDividerPrimary,
   CircularProgress,
   ErrorView,
+  TextLabelMediumNeutral80,
 } from '../presentation/components';
 import { space4 } from '../presentation/foundation/dimensions';
-import { lightTheme } from '../presentation/foundation';
+import { lightTheme, useAppColors } from '../presentation/foundation';
 
 function App(): React.JSX.Element {
   return (
@@ -51,16 +51,16 @@ function App(): React.JSX.Element {
 }
 
 const TestScreen = () => {
+  const colors = useAppColors();
   const [textValue, setTextValue] = useState('');
   const [checked, setChecked] = useState(false);
   const [switchValue, setSwitchValue] = useState(false);
 
   return (
     <ScrollView style={styles.container}>
-        <TextHeadlineMediumPrimary>aaa</TextHeadlineMediumPrimary>
+      <TextHeadlineMediumPrimary>aaa</TextHeadlineMediumPrimary>
 
-      {/* Text Components */}
-      {/* <View style={styles.section}>
+      <View style={styles.section}>
         <TextTitleLargePrimary>Text Components</TextTitleLargePrimary>
         <ColumnSpacer2 />
         <TextHeadlineMediumPrimary>Headline Medium Primary</TextHeadlineMediumPrimary>
@@ -75,12 +75,11 @@ const TestScreen = () => {
         <ColumnSpacer2 />
         <TextBodySmallNeutral80>Body Small Neutral 80</TextBodySmallNeutral80>
         <ColumnSpacer2 />
-        <TextLabelLarge>Label Large</TextLabelLarge>
-        <TextButtonPrimary>Button Primary Text</TextButtonPrimary>
-        <TextButtonError>Button Error Text</TextButtonError>
-        <TextLabelMedium>Label Medium</TextLabelMedium>
-        <TextLabelSmall>Label Small</TextLabelSmall>
-      </View> */}
+        <TextLabelLargePrimary>Label Large</TextLabelLargePrimary>
+        <TextLabelMediumNeutral80>Label Medium Neutral 80</TextLabelMediumNeutral80>
+        <TextLabelSmall color={colors.primary}>Label Small</TextLabelSmall>
+        
+      </View>
 
       {/* <AppDividerPrimary /> */}
 
