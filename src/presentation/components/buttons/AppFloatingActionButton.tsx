@@ -20,7 +20,12 @@ export const AppFloatingActionButton: React.FC<AppFloatingActionButtonProps> = (
     <FAB
       icon={icon}
       onPress={onPress}
-      style={{ backgroundColor: theme.colors.primary }}
+      style={{
+        backgroundColor: theme.colors.primary,
+        position: 'absolute',
+        right: 16,
+        bottom: 16,
+      }}
       label={label}
       color={theme.colors.neutral0}
       customSize={56}
