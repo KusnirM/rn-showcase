@@ -1,2 +1,4 @@
 export { RootStackNavigator } from './RootStackNavigator';
-export type { RootStackParamList } from './RootStackParamList';
+export { BottomTabNavigator } from './BottomTabNavigator';
+export { HomeStackNavigator } from './HomeStackNavigator';
+export type { RootStackParamList, BottomTabParamList, HomeStackParamList } from './RootStackParamList';

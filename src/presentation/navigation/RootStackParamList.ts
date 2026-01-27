@@ -1,7 +1,13 @@
+import { NavigatorScreenParams } from '@react-navigation/native';
+import { BottomTabParamList } from './BottomTabNavigator';
+import { HomeStackParamList } from './HomeStackNavigator';
+
 export type RootStackParamList = {
-  Home: undefined;
-  UiComponents: undefined;
+  Main: NavigatorScreenParams<BottomTabParamList>;
 };
+
+// Re-export for convenience
+export type { BottomTabParamList, HomeStackParamList };
 
 // Type-safe navigation pre celú appku
 declare global {
