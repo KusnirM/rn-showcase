@@ -11,18 +11,16 @@ interface AppFloatingActionButtonProps {
 }
 
 export const AppFloatingActionButton: React.FC<AppFloatingActionButtonProps> = ({
-  icon,
+  icon = 'plus',
   onPress,
-  style,
   label,
 }) => {
   const theme = useAppTheme();
-
   return (
     <FAB
       icon={icon}
       onPress={onPress}
-      style={style}
+      style={{ backgroundColor: theme.colors.primary }}
       label={label}
       color={theme.colors.neutral0}
       customSize={56}

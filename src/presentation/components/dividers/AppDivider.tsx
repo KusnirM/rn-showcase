@@ -8,11 +8,6 @@ interface AppDividerProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const AppDivider: React.FC<AppDividerProps> = ({ color, style }) => {
-  return <Divider style={[{ backgroundColor: color }, style]} />;
-};
+const AppDivider: React.FC<AppDividerProps> = ({ color, style }) => <Divider style={[{ backgroundColor: color }, style]} />;
 
-export const AppDividerPrimary: React.FC<{ style?: StyleProp<ViewStyle> }> = ({ style }) => {
-  const theme = useAppTheme();
-  return <AppDivider color={theme.colors.primary} style={style} />;
-};
+export const AppDividerPrimary: React.FC<{ style?: StyleProp<ViewStyle> }> = ({ style }) => <AppDivider color={useAppTheme().colors.primary} style={style} />;

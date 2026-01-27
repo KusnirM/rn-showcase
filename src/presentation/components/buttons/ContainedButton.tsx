@@ -7,13 +7,11 @@ import { space4, cardCornerRadius6 } from '../../foundation/dimensions';
 interface ContainedButtonProps {
   text: string;
   onPress: () => void;
-  style?: StyleProp<ViewStyle>;
 }
 
 export const ContainedButton: React.FC<ContainedButtonProps> = ({
   text,
   onPress,
-  style,
 }) => {
   const theme = useAppTheme();
 
@@ -21,7 +19,6 @@ export const ContainedButton: React.FC<ContainedButtonProps> = ({
     <Button
       mode="contained"
       onPress={onPress}
-      style={style}
       contentStyle={{ paddingVertical: space4 }}
       buttonColor={theme.colors.primary}
       textColor={theme.colors.neutral0}

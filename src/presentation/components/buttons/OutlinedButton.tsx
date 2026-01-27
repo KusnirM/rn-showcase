@@ -13,7 +13,6 @@ interface OutlinedButtonProps {
 export const OutlinedButton: React.FC<OutlinedButtonProps> = ({
   text,
   onPress,
-  style,
 }) => {
   const theme = useAppTheme();
 
@@ -21,7 +20,6 @@ export const OutlinedButton: React.FC<OutlinedButtonProps> = ({
     <Button
       mode="outlined"
       onPress={onPress}
-      style={style}
       contentStyle={{ paddingVertical: space4 }}
       textColor={theme.colors.primary}
       theme={{ roundness: cardCornerRadius6 }}
