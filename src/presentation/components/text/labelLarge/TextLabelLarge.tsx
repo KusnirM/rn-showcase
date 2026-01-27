@@ -7,14 +7,14 @@ export const TextLabelLarge = ({ children, color }: TextBaseProps) => (
   <Text variant="labelLarge" style={{ color }}>{children}</Text>
 );
 
-export const TextButtonPrimary = ({ children }: TextVariantProps) => (
+export const TextLabelLargePrimary = ({ children }: TextVariantProps) => (
   <TextLabelLarge color={useAppColors().primary}>{children}</TextLabelLarge>
 );
 
-export const TextButtonNeutral0 = ({ children }: TextVariantProps) => (
+export const TextLabelLargeNeutral0 = ({ children }: TextVariantProps) => (
   <TextLabelLarge color={useAppColors().neutral0}>{children}</TextLabelLarge>
 );
 
-export const TextButtonError = ({ children }: TextVariantProps) => (
+export const TextLabelLargeError = ({ children }: TextVariantProps) => (
   <TextLabelLarge color={useAppColors().error}>{children}</TextLabelLarge>
 );

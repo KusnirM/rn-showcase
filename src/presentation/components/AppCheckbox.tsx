@@ -5,13 +5,13 @@ import { useAppTheme } from '../foundation/theme';
 interface AppCheckboxProps {
   checked: boolean;
   onPress?: () => void;
-  disabled?: boolean;
+  enabled?: boolean;
 }
 
 export const AppCheckbox: React.FC<AppCheckboxProps> = ({
   checked = false,
   onPress,
-  disabled = false,
+  enabled = true,
 }) => {
   const theme = useAppTheme();
 
@@ -19,7 +19,7 @@ export const AppCheckbox: React.FC<AppCheckboxProps> = ({
     <Checkbox
       status={checked ? 'checked' : 'unchecked'}
       onPress={onPress}
-      disabled={disabled}
+      disabled={!enabled}
       color={theme.colors.primary}
       uncheckedColor={theme.colors.neutral80}
     />

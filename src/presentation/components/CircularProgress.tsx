@@ -2,15 +2,16 @@ import React from 'react';
 import { ActivityIndicator } from 'react-native-paper';
 import { StyleProp, ViewStyle } from 'react-native';
 import { useAppTheme } from '../foundation/theme';
-import { space8 } from '../foundation/dimensions';
+import { space6, space } from '../foundation/dimensions';
+
 
 interface CircularProgressProps {
-  size?: number;
+  size:  'small' | 'large' | number;
   style?: StyleProp<ViewStyle>;
 }
 
 export const CircularProgress: React.FC<CircularProgressProps> = ({
-  size = space8,
+  size = 'large',
   style,
 }) => {
   const theme = useAppTheme();
@@ -19,7 +20,8 @@ export const CircularProgress: React.FC<CircularProgressProps> = ({
     <ActivityIndicator
       size={size}
       color={theme.colors.primary}
-      style={style}
+      style={{}}
     />
   );
 };
+
