@@ -4,7 +4,7 @@ import { StyleProp, ViewStyle } from 'react-native';
 import { useAppTheme } from '../../foundation/theme';
 
 interface AppFloatingActionButtonProps {
-  icon: string;
+  icon?: string;
   onPress: () => void;
   style?: StyleProp<ViewStyle>;
   label?: string;

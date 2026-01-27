@@ -131,6 +131,7 @@ const TestScreen = () => {
       <ColumnSpacer4 />
 
       <ColumnSpacer12 />
+      <AppFloatingActionButton onPress={() => console.log('Floating Action Button pressed')} />
       </View>
             <ColumnSpacer12 />
       <ColumnSpacer12 />
