@@ -5,12 +5,17 @@ import { useAppTheme } from '../../foundation/theme';
 interface AppCardProps {
   children: React.ReactNode;
   elevated?: boolean;
+  onPress?: () => void;
 }
 
-export const AppCard: React.FC<AppCardProps> = ({ children, elevated = true }): React.JSX.Element => {
+export const AppCard: React.FC<AppCardProps> = ({ children, elevated = true, onPress }): React.JSX.Element => {
   const theme = useAppTheme();
   return (
-    <Card mode="elevated" elevation={elevated ? 1 : 0} style={{ backgroundColor: theme.colors.surface }}>
+    <Card mode={elevated ? "elevated" : "contained"} style={{ 
+      borderStyle: 'solid', 
+      borderWidth: elevated ? 0 : 1, 
+      borderColor: theme.colors.neutral10,
+      backgroundColor: theme.colors.surface }} onPress={onPress}>
       <Card.Content>{children}</Card.Content>
     </Card>
   );

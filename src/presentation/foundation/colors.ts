@@ -19,6 +19,7 @@ export const lightColorScheme = {
   surfaceVariant: '#232323',
   // Custom colors
   neutral0: '#FFFFFF',
+  neutral10: '#E4E4E4',
   neutral20: '#C8C8C8',
   neutral40: '#919191',
   neutral60: '#5A5A5A',
@@ -50,6 +51,7 @@ export const darkColorScheme = {
   surfaceVariant: '#6E6E6E',
   // Custom colors
   neutral0: '#121212',
+  neutral10: '#1F1F1F',
   neutral20: '#2C2C2C',
   neutral40: '#6E6E6E',
   neutral60: '#A0A0A0',

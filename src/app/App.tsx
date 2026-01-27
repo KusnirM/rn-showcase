@@ -4,7 +4,6 @@ import { PaperProvider } from 'react-native-paper';
 import {
   TextBodyLarge,
   TextBodyLargeNeutral100,
-  TextBodyLargeNeutral80,
   TextBodyLargePrimary,
   TextBodyMedium,
   TextBodyMediumNeutral100,
@@ -38,6 +37,7 @@ import {
   CircularProgress,
   ErrorView,
   TextLabelMediumNeutral80,
+  ColumnSpacer12,
 } from '../presentation/components';
 import { space4 } from '../presentation/foundation/dimensions';
 import { lightTheme, useAppColors } from '../presentation/foundation';
@@ -52,7 +52,7 @@ function App(): React.JSX.Element {
 
 const TestScreen = () => {
   const colors = useAppColors();
-  const [textValue, setTextValue] = useState('');
+  const [textValue, setTextValue] = useState('value');
   const [checked, setChecked] = useState(false);
   const [switchValue, setSwitchValue] = useState(false);
 
@@ -81,86 +81,62 @@ const TestScreen = () => {
         <ColumnSpacer2 />
         <CircularProgress />
         <ColumnSpacer2 />
-        <CircularProgress size='small' />
+        <CircularProgress size="small" />
+      </View>
 
-        <AppDividerPrimary />
-                <ColumnSpacer2 />
+      <AppDividerPrimary />
+
+      <View style={styles.section}>
+        <TextTitleLargePrimary>Button Components</TextTitleLargePrimary>
+        <ColumnSpacer4 />
         <ContainedButton text="Contained Button" onPress={() => console.log('Contained')} />
-                  <ColumnSpacer2 />
+        <ColumnSpacer2 />
         <OutlinedButton text="Outlined Button" onPress={() => console.log('Outlined')} />
-                  <ColumnSpacer2 />
+        <ColumnSpacer2 />
         <AppTextButton text="Text Button" onPress={() => console.log('Text')} />
         <ColumnSpacer2 />
-
         <AppTextButtonError text="Text Button Error" onPress={() => console.log('Error')} />
+      </View>
 
-        <AppCard>
-          <TextBodyLarge>App Card</TextBodyLarge>
+      <AppDividerPrimary />
+
+      <View style={styles.section}>
+        <TextTitleLargePrimary>Card Components</TextTitleLargePrimary>
+        <ColumnSpacer4 />
+
+        <AppCard elevated={false}>
+          <TextBodyLarge color={colors.neutral80}>App Card</TextBodyLarge>
           <TextBodySmallNeutral80>This is a basic card component</TextBodySmallNeutral80>
         </AppCard>
 
         <ColumnSpacer4 />
 
         <AppCard onPress={() => console.log('Card pressed')}>
-          <TextBodyLargeNeutral80>Elevated Card (Clickable)/</TextBodyLargeNeutral80>>
+          <TextBodyLarge color={colors.neutral80}>Elevated Card (Clickable)</TextBodyLarge>
           <TextBodySmallNeutral80>This card has elevation and is clickable</TextBodySmallNeutral80>
         </AppCard>
-      </View>
-
-      <AppDividerPrimary />
-        {/*
-
-      <View style={styles.section}>
-        <TextTitleLargePrimary>Form Components</TextTitleLargePrimary>
         <ColumnSpacer4 />
-
-        <AppTextField
-          value={textValue}
-          onChangeText={setTextValue}
-          label="Text Field"
-          placeholder="Enter text here..."
+        <AppCheckbox
+          checked={checked}
+          onPress={() => setChecked(!checked)}
         />
+      <ColumnSpacer2 />
+      <AppSwitch
+        value={switchValue}
+        onValueChange={(newValue) => setSwitchValue(newValue)}
+      />
+      <ColumnSpacer4 />
 
-        <ColumnSpacer4 />
+      <AppTextField value={textValue} onChangeText={setTextValue} label='label'/>
+      <ColumnSpacer4 />
 
-        <View style={styles.row}>
-          <AppCheckbox checked={checked} onPress={() => setChecked(!checked)} />
-          <TextBodyMedium>Checkbox Example</TextBodyMedium>
-        </View>
-
-        <ColumnSpacer4 />
-
-        <View style={styles.row}>
-          <AppSwitch value={switchValue} onValueChange={setSwitchValue} />
-          <TextBodyMedium>Switch Example</TextBodyMedium>
-        </View>
+      <ColumnSpacer12 />
       </View>
-
-      <AppDividerPrimary /> */}
-
-        {/* <View style={styles.section}>
-        <TextTitleLargePrimary>Utility Components</TextTitleLargePrimary>
-        <ColumnSpacer4 />
-
-        <TextBodyMedium>Circular Progress:</TextBodyMedium>
-        <ColumnSpacer2 />
-        <CircularProgress />
-
-        <ColumnSpacer6 />
-
-        <TextBodyMedium>Error View (compact):</TextBodyMedium>
-        <ColumnSpacer2 />
-        <View style={{ height: 200 }}>
-          <ErrorView
-            message="Something went wrong!"
-            onRetry={() => console.log('Retry')}
-          />
-        </View>
-      </View>
-
-      <View style={{ height: 100 }} /> */}
-      </View>
-
+            <ColumnSpacer12 />
+      <ColumnSpacer12 />
+      <ColumnSpacer12 />
+      <ColumnSpacer12 />
+      <ColumnSpacer12 />
     </ScrollView>
   );
 };

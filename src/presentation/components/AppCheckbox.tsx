@@ -21,7 +21,7 @@ export const AppCheckbox: React.FC<AppCheckboxProps> = ({
       onPress={onPress}
       disabled={!enabled}
       color={theme.colors.primary}
-      uncheckedColor={theme.colors.neutral80}
+      uncheckedColor={theme.colors.neutral40}
     />
   );
 };
