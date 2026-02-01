@@ -37,7 +37,7 @@ export class NotificationClient implements LocalNotificationService {
       body: notification.message,
       android: {
         channelId: channelConfig.id,
-        smallIcon: 'ic_launcher',
+        smallIcon: 'ic_notification',
         pressAction: { id: 'default' },
       },
     });
