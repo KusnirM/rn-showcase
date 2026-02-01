@@ -4,9 +4,7 @@ import { useThemeMode } from '../../foundation/ThemeProvider';
 import { useStrings, Language } from '../../foundation/strings';
 import { SettingsUiState } from './SettingsUiState';
 import { getCrashlytics, crash } from '@react-native-firebase/crashlytics';
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const { version } = require('../../../../package.json');
+import { version } from '../../../../package.json';
 
 export const useSettingsViewModel = () => {
   const { themeMode, setThemeMode } = useThemeMode();
