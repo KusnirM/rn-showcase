@@ -5,7 +5,8 @@ import { useStrings, Language } from '../../foundation/strings';
 import { SettingsUiState } from './SettingsUiState';
 import { getCrashlytics, crash } from '@react-native-firebase/crashlytics';
 
-const APP_VERSION = '0.0.1';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { version } = require('../../../../package.json');
 
 export const useSettingsViewModel = () => {
   const { themeMode, setThemeMode } = useThemeMode();
@@ -16,7 +17,7 @@ export const useSettingsViewModel = () => {
   const uiState: SettingsUiState = useMemo(() => ({
     themeMode,
     language,
-    versionName: APP_VERSION,
+    versionName: version,
     showThemeDialog,
     showLanguageDialog,
     showCrashButton: __DEV__,
